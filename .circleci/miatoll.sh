@@ -10,7 +10,7 @@ KERNEL_DIR="$(pwd)"
 
 ##----------------------------------------------------------##
 # Device Name and Model
-MODEL=POCO-X3
+MODEL=Xiaomi
 DEVICE=miatoll
 
 # Kernel Version Code

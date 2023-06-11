@@ -24,7 +24,7 @@ DISABLE_LTO=1
 THIN_LTO=0
 
 # Files
-IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz
+IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
 DTBO=$(pwd)/out/arch/arm64/boot/dtbo.img
 #DTB=$(pwd)/out/arch/arm64/boot/dts/qcom
 
@@ -290,6 +290,11 @@ START=$(date +"%s")
 	       OBJSIZE=llvm-size \
 	       V=$VERBOSE 2>&1 | tee error.log
 	fi
+	
+	echo "**** Verify Image.gz-dtb & dtbo.img ****"
+    ls $(pwd)/out/arch/arm64/boot/Image.gz-dtb
+    ls $(pwd)/out/arch/arm64/boot/dtbo.img
+    
 }
 
 ##----------------------------------------------------------------##
